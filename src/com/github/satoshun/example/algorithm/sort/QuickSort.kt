@@ -1,5 +1,7 @@
 package com.github.satoshun.example.algorithm.sort
 
+import com.github.satoshun.example.algorithm.swap
+
 fun quickSort(o: List<Int>): List<Int> {
   val oo = o.toMutableList()
   quickSort(oo, 0, oo.size - 1)

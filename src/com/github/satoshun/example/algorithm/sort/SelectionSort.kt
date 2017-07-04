@@ -1,5 +1,7 @@
 package com.github.satoshun.example.algorithm.sort
 
+import com.github.satoshun.example.algorithm.swap
+
 fun selectionSort(s: List<Int>): List<Int> {
   val ss = s.toMutableList()
   for (i in 1 until ss.size) {

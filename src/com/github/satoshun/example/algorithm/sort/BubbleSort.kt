@@ -1,5 +1,7 @@
 package com.github.satoshun.example.algorithm.sort
 
+import com.github.satoshun.example.algorithm.swap
+
 fun bubbleSort(s: List<Int>): List<Int> {
   val ss = s.toMutableList()
   for (i in 0..ss.size - 2) {
@@ -10,10 +12,4 @@ fun bubbleSort(s: List<Int>): List<Int> {
     }
   }
   return ss
-}
-
-fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
-  val tmp = this[index1]
-  this[index1] = this[index2]
-  this[index2] = tmp
 }
