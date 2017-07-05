@@ -14,14 +14,10 @@ fun shellSort(o: List<Int>): List<Int> {
 
 fun shellSort(o: MutableList<Int>, gap: Int) {
   for (g in 0 until gap) {
-    for (i in g until o.size step gap) {
-      var m = i
-      for (j in i until o.size step gap) {
-        if (o[m] > o[j]) {
-          m = j
-        }
+    for (i in gap + g until o.size step gap) {
+      for (j in i downTo gap + g step gap) {
+        if (o[j] < o[j - gap]) o.swap(j, j - gap)
       }
-      o.swap(m, i)
     }
   }
 }
